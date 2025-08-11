@@ -1,82 +1,96 @@
-import { Section, Text, Heading, Hr, Row, Column, } from '@react-email/components'
+import { Section, Text, Heading, Hr } from '@react-email/components'
 import BaseEmailLayout from '../layouts/base-layout'
 
 const SuccessSettlement = () => {
   return (
-    <BaseEmailLayout title="Settlement Successful" preview="Your settlement was processed successfully">
+    <BaseEmailLayout title="Settlement Success" preview="Your settlement was processed successfully">
       <Section style={{ marginBottom: 32, textAlign: 'left' }}>
-        <Heading style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold', color: '#262626' }}>
+        <Heading style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold' }}>
           Settlement Berhasil Dikirim ke Rekening Anda
         </Heading>
         <Text style={{ fontSize: 16, color: '#525252' }}>
-          Settlement sejumlah "Rp100.000" berhasil dikirim ke rekening Anda. Berikut detail settlement yang dikirim.
+          Settlement sejumlah <span style={{ fontWeight: 600 }}>"Rp100.000"</span> berhasil dikirim ke rekening Anda. Berikut detail settlement yang dikirim:
         </Text>
       </Section>
-      <Hr style={{ margin: '6px 0', borderColor: '#e5e7eb' }} />
-      <Section style={{ padding: '12px 0' }}>
-        <Heading style={{ marginBottom: 16, fontSize: 18, fontWeight: 600, color: '#262626' }}>
-          Detail Merchant
+      <Hr style={{ margin: '16px 0', borderColor: '#e5e7eb' }} />
+      <Section >
+        <Heading style={{ marginBottom: 12, fontSize: 20, fontWeight: 600, color: '#262626' }}>
+          Detail Settlement
         </Heading>
         <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: 8 }}>
           <tbody>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Nama Bisnis</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>Toys Store</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Nama Bisnis</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Toys Store</td>
             </tr>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>ID Merchant</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>#18376398</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Settlement ID</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>#18376398</td>
             </tr>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Nama Pemilik</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>John Doe</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0', width: '50%' }}>Tanggal Settlement</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>21 Jun 2023, 12:00</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Tanggal Diproses</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>21 Jun 2023, 14:00</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Jumlah Transaksi</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>23 Transaksi</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Status</td>
+              <td style={{ color: '#28A745', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Berhasil</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0', width: '50%' }}>Note</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Lorem ipsum dolor sit amet consectetur. Porttitor pretium blandit enim volutblablabla  sapien dictum duis nunc molestie suspendisse. </td>
             </tr>
           </tbody>
         </table>
       </Section>
-      <Hr style={{ margin: '6px 0', borderColor: '#e5e7eb' }} />
-      <Section style={{ padding: '12px 0' }}>
-        <Heading style={{ marginBottom: 16, fontSize: 18, fontWeight: 600, color: '#262626' }}>
-          Detail Transfer
+      <Hr style={{ margin: '16px 0', borderColor: '#e5e7eb' }} />
+      <Section >
+        <Heading style={{ marginBottom: 12, fontSize: 20, fontWeight: 600, color: '#262626' }}>
+          Informasi Transfer
         </Heading>
         <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: 8 }}>
           <tbody>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Total Settlement</td>
-              <td style={{ color: '#262626', fontWeight: 'bold', fontSize: 20, padding: '6px 0', textAlign: 'right' }}>Rp 200.000</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Akun Penerima</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Sandbox, BCA - 121826789</td>
             </tr>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Total Transfer</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>Rp 197.500</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Jumlah Transaksi</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>23 Transaksi</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Akun Tujuan</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>139003298 (Nacht)</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Status</td>
-              <td style={{ color: '#16a34a', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>Sukses</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }} colSpan={2}>Catatan</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 16, fontWeight: 500, padding: '6px 0' }} colSpan={2}>lorem ipsum dolor sit amet</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Transfer Dari</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>SinarPay, BCA - 772912919</td>
             </tr>
           </tbody>
         </table>
       </Section>
-      <Hr style={{ margin: '6px 0', borderColor: '#e5e7eb' }} />
-      <Section style={{ padding: '12px 0' }}>
-        <Text>Attachment Here</Text>
-        <Text>Password Zip</Text>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', letterSpacing: 2, color: '#262626' }}>
-          253478
-        </Text>
+      <Hr style={{ margin: '16px 0', borderColor: '#e5e7eb' }} />
+      <Section >
+        <Heading style={{ marginBottom: 12, fontSize: 20, fontWeight: 600, color: '#262626' }}>
+          Rincian Transaksi
+        </Heading>
+        <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: 8 }}>
+          <tbody>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Total Settlement</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Rp 1.000.000</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Biaya Layanan Settlement</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Rp 10.000</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 18, fontWeight: 600, padding: '6px 0' }}>Total</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 18, padding: '6px 0', textAlign: 'right' }}>Rp 990.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </Section>
+      <Section >
         <Text>
           Untuk informasi atau pertanyaan lebih lanjut, mohon buat Tiket Bantuan atau hubungi{' '}
           <a href="mailto:support@sinarpay.co.id" style={{ color: '#0066cc', textDecoration: 'underline' }}>

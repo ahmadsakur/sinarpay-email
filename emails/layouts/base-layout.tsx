@@ -15,7 +15,7 @@ const BaseEmailLayout = (props: BaseEmailLayoutProps) => {
         <title>{title}</title>
       </Head>
       <Preview>{preview}</Preview>
-      <Tailwind>
+      <Tailwind >
         <Body className="pt-8 font-poppins bg-gray-50 font-sans">
           <div className="max-w-3xl mx-auto overflow-hidden bg-white rounded-lg">
             <div className='w-full h-4 bg-blue-500' />
@@ -24,13 +24,13 @@ const BaseEmailLayout = (props: BaseEmailLayoutProps) => {
               {children}
             </div>
             <Section style={{ textAlign: 'center' }}>
-              <Text style={{ fontSize: 14, color: '#9ca3af' }}>
+              <Text style={{ fontSize: 14, color: '#404040', margin: '0px' }}>
                 Headquarter : Nifarro Park, ITS Tower, Jakarta 12510
               </Text>
-              <Text style={{ fontSize: 14, color: '#9ca3af' }}>
+              <Text style={{ fontSize: 14, color: '#404040', margin: '0px' }}>
                 Operational : Jl. Terusan Jakarta No.175a, Bandung, 40291
               </Text>
-              <Text style={{ marginTop: 16, fontSize: 10, color: '#9ca3af' }}>
+              <Text style={{ marginTop: 16, fontSize: 10, color: '#404040' }}>
                 Copyright © 2025 Sinar Digital Nusantara
               </Text>
             </Section>

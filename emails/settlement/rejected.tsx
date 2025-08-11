@@ -1,75 +1,63 @@
-import { Section, Text, Heading, Hr, Row, Column, } from '@react-email/components'
+import { Section, Text, Heading, Hr } from '@react-email/components'
 import BaseEmailLayout from '../layouts/base-layout'
 
-const FailedSettlement = () => {
+const SuccessSettlement = () => {
   return (
-    <BaseEmailLayout title="Settlement Failed" preview="Your settlement was processed successfully">
+    <BaseEmailLayout title="Settlement Success" preview="Your settlement was processed successfully">
       <Section style={{ marginBottom: 32, textAlign: 'left' }}>
-        <Heading style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold', color: '#b62134ff' }}>
-          Settlement Gagal Dikirim ke Rekening Anda
+        <Heading style={{ marginBottom: 16, fontSize: 24, fontWeight: 'bold', color: '#D9534F' }}>
+          Settlement Ditolak
         </Heading>
         <Text style={{ fontSize: 16, color: '#525252' }}>
           Sistem gagal mengirimkan settlement ke rekening Anda. Berikut detail settlement yang gagal diproses:
         </Text>
       </Section>
-      <Hr style={{ margin: '6px 0', borderColor: '#e5e7eb' }} />
-      <Section style={{ padding: '12px 0' }}>
-        <Heading style={{ marginBottom: 16, fontSize: 18, fontWeight: 600, color: '#262626' }}>
-          Detail Merchant
+      <Hr style={{ margin: '16px 0', borderColor: '#e5e7eb' }} />
+      <Section >
+        <Heading style={{ marginBottom: 12, fontSize: 20, fontWeight: 600, color: '#262626' }}>
+          Detail Settlement
         </Heading>
         <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: 8 }}>
           <tbody>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Nama Bisnis</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>Toys Store</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Nama Bisnis</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Toys Store</td>
             </tr>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>ID Merchant</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>#18376398</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Settlement ID</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>#18376398</td>
             </tr>
             <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Nama Pemilik</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>John Doe</td>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0', width: '50%' }}>Tanggal Settlement</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>21 Jun 2023, 12:00</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Tanggal Diproses</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>21 Jun 2023, 14:00</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Jumlah Transaksi</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>23 Transaksi</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0' }}>Status</td>
+              <td style={{ color: '#D9534F', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Ditolak</td>
+            </tr>
+            <tr>
+              <td style={{ color: '#525252', fontSize: 12, padding: '6px 0', width: '50%' }}>Note</td>
+              <td style={{ color: '#262626', fontWeight: 600, fontSize: 12, padding: '6px 0', textAlign: 'right' }}>Lorem ipsum dolor sit amet consectetur. Porttitor pretium blandit enim volutblablabla  sapien dictum duis nunc molestie suspendisse. </td>
             </tr>
           </tbody>
         </table>
       </Section>
-      <Hr style={{ margin: '6px 0', borderColor: '#e5e7eb' }} />
-      <Section style={{ padding: '12px 0' }}>
-        <Heading style={{ marginBottom: 16, fontSize: 18, fontWeight: 600, color: '#262626' }}>
-          Detail Transfer
-        </Heading>
-        <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: 8 }}>
-          <tbody>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Total Settlement</td>
-              <td style={{ color: '#262626', fontWeight: 'bold', fontSize: 20, padding: '6px 0', textAlign: 'right' }}>Rp 200.000</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Akun Tujuan</td>
-              <td style={{ color: '#262626', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>139003298 (Nacht)</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }}>Status</td>
-              <td style={{ color: '#b62134ff', fontWeight: 500, fontSize: 14, padding: '6px 0', textAlign: 'right' }}>Gagal</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 14, padding: '6px 0' }} colSpan={2}>Catatan</td>
-            </tr>
-            <tr>
-              <td style={{ color: '#525252', fontSize: 16, fontWeight: 500, padding: '6px 0' }} colSpan={2}>lorem ipsum dolor sit amet</td>
-            </tr>
-          </tbody>
-        </table>
-      </Section>
-      <Hr style={{ margin: '6px 0', borderColor: '#e5e7eb' }} />
-      <Section style={{ padding: '12px 0' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#262626' }}>
+      <Hr style={{ margin: '16px 0', borderColor: '#e5e7eb' }} />
+      <Section >
+        <Heading style={{ marginBottom: 12, fontSize: 20, fontWeight: 600, color: '#262626' }}>
           Alasan Ditolak
-        </Text>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#262626' }}>
-          Nama pemilik rekening tidak ditemukan.
-        </Text>
+        </Heading>
+        <p className='text-sm font-bold'>Nama pemilik rekening tidak ditemukan.</p>
+      </Section>
+      <Section >
         <Text>
           Untuk informasi atau pertanyaan lebih lanjut, mohon buat Tiket Bantuan atau hubungi{' '}
           <a href="mailto:support@sinarpay.co.id" style={{ color: '#0066cc', textDecoration: 'underline' }}>
@@ -87,4 +75,4 @@ const FailedSettlement = () => {
   )
 }
 
-export default FailedSettlement
+export default SuccessSettlement
