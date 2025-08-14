@@ -9,9 +9,10 @@ const DownloadSettlement = () => {
           Berkas Data Transaksi Siap Diunduh
         </Heading>
         <Text className='text-base text-gray-700 mb-4'>
-          Berikut berkas data transaksi Settlement <span className='font-medium text-black'>#12831292</span>. Silakan unduh untuk menyimpan berkas:
+          Berikut berkas data transaksi Settlement <span className='font-medium text-black'>#12831292</span>. Silakan unduh dengan klik tombol di bawah. Tautan untuk mengunduh berkas akan kedaluwarsa setelah 24 jam.
         </Text>
-        <Link href='#' target='_blank'><Button className=' bg-blue-500 rounded-lg px-4 py-2 text-white font-medium text-sm'>Unduh Berkas</Button></Link>
+
+        <a href="#"><Button className=' bg-blue-500 rounded-lg px-4 py-2 text-white font-medium text-sm'>Unduh Berkas</Button></a>
         <Text className='text-base text-gray-700 mb-4'>
           Masukkan kata sandi berikut untuk membuka berkas:
         </Text>
